@@ -26,12 +26,12 @@ function App() {
 
     return (
         <div
-            className="w-full h-screen flex bg-cover bg-no-repeat"
+            className="flex flex-col md:flex-row w-full h-screen"
             style={{
                 backgroundImage: `url('https://images.pexels.com/photos/534216/pexels-photo-534216.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`
             }}
         >
-            <div className='w-1/2 flex justify-center items-center h-screen bg-cover bg-no-repeat'
+            <div className='w-full md:w-1/2 flex justify-center items-center bg-cover'
                 style={{backgroundImage:`url('https://images.pexels.com/photos/210705/pexels-photo-210705.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1')`}}
             >
                  <div className="absolute inset-0 bg-gradient-to-r from-black/70 to-transparent"></div> {/* Gradient overlay */}
@@ -39,8 +39,8 @@ function App() {
         Welcome To Currency Converter
     </h1>
             </div>
-            <div className='h-screen w-1 bg-blue-100'></div>
-            <div className="w-1/2 h-screen flex justify-end items-center pr-4">
+            <div className='md:h-screen md:w-1 w-screen h-1 bg-blue-100'></div>
+            <div className="w-full md:w-1/2 flex justify-center items-center p-4">
                 <div className="w-full max-w-md mx-auto border border-gray-60 rounded-lg p-5 backdrop-blur-sm bg-white/30">
                     <form
                         onSubmit={(e) => {
