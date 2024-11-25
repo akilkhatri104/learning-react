@@ -1,15 +1,16 @@
-import '../config/config.js'
+import '../conf/conf.js'
 import {Client,Account,ID} from 'appwrite'
+import conf from '../conf/conf.js';
 
 export class AuthService{
     client = new Client()
 
     constructor() {
         this.client
-            .setEndpoint(config.appwriteUrl)
-            .setProject(config.appwriteProjectId);
+            .setEndpoint(conf.appwriteUrl)
+            .setProject(conf.appwriteProjectId);
 
-        this.account = new Account(client)
+        this.account = new Account(this.client)
     }
 
     async createAccount({email,password,name}) {
